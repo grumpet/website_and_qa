@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Home Page</h1>
+    <table>
+        {% for picture in pictures %}
+        <tr>
+            <td><img src="{{ picture.url }}" width="150" height="150"></td>
+            <td><a href="{{ url_for('confirm', picture_id=picture.id) }}">View</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('signup') }}">Sign Up</a>
+    <a href="{{ url_for('login') }}">Sign In</a>
+    <a href="{{ url_for('settings') }}">Settings</a>
+    <a href="{{ url_for('add_payment') }}">add payment</a>
+</body>
+</html>

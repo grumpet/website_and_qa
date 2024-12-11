@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm</title>
+</head>
+<body>
+    <h1>Are you sure?</h1>
+    <iframe src="{{ url_for('picture', picture_id=picture_id) }}" width="300" height="200"></iframe>
+    <form action="{{ url_for('picture', picture_id=picture_id) }}" method="get">
+        <button type="submit">Yes</button>
+    </form>
+    <a href="{{ url_for('home') }}">No</a>
+</body>
+</html>
